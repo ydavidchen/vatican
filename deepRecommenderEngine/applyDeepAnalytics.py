@@ -11,7 +11,7 @@ import pandas as pd
 import pickle
 import matplotlib.pyplot as plt
 import seaborn as sns
-sns.set(rc={"figure.figsize":(4,7),
+sns.set(rc={"figure.figsize":(4,8),
             "font.size":20,
             "axes.titlesize":20,
             "axes.labelsize":25,
@@ -31,16 +31,16 @@ def loadAndApply():
 	return clf.predict_proba(newData);
 
 ## Data visualization and export for display in HTML:
-def visualizeAndExport(probScore):
+def visualizeAndExport(probScore, filePath, savefig=True):
     '''
-    Data visualization and export for display in HTML
+    Visulizes probability of getting flu (barplot) and recommends (title):
     '''
     ## Binary decision
     condition = probScore > 0.50; 
     title = "Should you get a flu shot? \n";
     title += "Yes!" if condition else "No!";
-    
-    ## 
+
+    ## Data visualization
     plt.plot();
     plt.bar(1, probScore, width=2); 
     plt.yticks(np.arange(0,1,0.2)); 
@@ -48,6 +48,13 @@ def visualizeAndExport(probScore):
     plt.ylabel('Probability')
     plt.ylim(0, 1);
     plt.title(title);
-    
-    #plt.show();
-    plt.savefig(fname='patientRecommendation.png', dpi=300); 
+
+    if savefig:
+        plt.savefig(fname=filePath, dpi=300);
+    else:
+        plt.show(); 
+
+    return None; 
+
+
+

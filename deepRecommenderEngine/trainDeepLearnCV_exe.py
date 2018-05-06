@@ -15,6 +15,6 @@ if __name__ == '__main__':
 	test_score, test_predLab = evalOnTest(clf, X_test); 
 	drawROCandCM(y_test, test_predLab, test_score[: , 1]);
 	filename = 'retrainedFinalModel.sav'; 
-	pickle.dump(clf, open(filename, 'wb'))
-print(clf)
+	pickle.dump(clf, open(filename, 'wb')); 
+
 quit();
