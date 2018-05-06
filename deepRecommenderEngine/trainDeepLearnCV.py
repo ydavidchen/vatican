@@ -9,6 +9,7 @@ import numpy as np
 import pandas as pd
 import itertools
 import re
+import matplotlib.pyplot as plt
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.model_selection import GridSearchCV, train_test_split
 from sklearn.neural_network import MLPClassifier
