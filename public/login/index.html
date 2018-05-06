@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>vatican: login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header><p><a href="http://www.vaticanBlockChain.org/" target="_blank"><img src="../../Assets/bigvatican.svg"></a></p>
+</header>
+<div class="form-modal">
+    
+    <div class="form-toggle">
+        <button id="login-toggle" onclick="toggleLogin()">log in</button>
+        <button id="signup-toggle" onclick="toggleSignup()">sign up</button>
+    </div>
+
+    <div id="login-form">
+        <form>
+            <input type="text" placeholder="Enter Email or Public Key"/>
+            <input type="password" placeholder="Enter Password or Private Key"/>
+            <button type="button" class="btn login" onclick="location.href='../main/index.html';">login</button>
+            <p><a href="javascript:void(0)">Need assistance?</a></p>
+            <hr/>
+        </form>
+    </div>
+
+    <div id="signup-form">
+        <form>
+            <input type="text" placeholder="Enter your first name"/>
+            <input type="text" placeholder="Enter your last name"/>
+            <input type="text" placeholder="Enter your middle initial"/>
+            <input type="text" placeholder="(Optional) Enter your nickname"/>
+            <input type="email" placeholder="Enter your email"/>
+            <input type="password" placeholder="Create password (private key)"/>
+            <button type="button" class="btn signup">Create account</button>
+            <p>By <strong>signing up</strong>, you agree to our and your provider's terms of services</p>
+            <hr/>
+        </form>
+    </div>
+</div>
+<footer>
+  <p>Vatican: a <a href="http://blockhack.de/" target="_blank">BlockHackDE </a>project</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
