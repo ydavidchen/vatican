@@ -67,8 +67,8 @@ def loadTrainingData(testFrac=0.10):
 	return X_train, X_test, y_train, y_test; 
 
 def isFluDeepLearnCV(X_train, y_train, nfold=10, 
-					 alphaRange=10.0 ** -np.arange(1,4), initRange=10.0 ** -np.arange(1,4),
-					 layarRange=np.arange(5,9,2), nLayer=40, solverList=['adam','lbfgs']):
+					 alphaRange=10.0 ** -np.arange(1,5), initRange=10.0 ** -np.arange(1,5),
+					 layarRange=np.arange(100,200,50), nLayer=100, solverList=['adam','lbfgs']):
 	'''
 	Implements cross validation & grid search on CDC data with constant layers
 	'''
@@ -133,6 +133,7 @@ def drawROCandCM(y_true, y_pred, y_score, classes=[0,1],
         plt.title(title)
         plt.legend(loc="lower right")
         plt.show()
+        plt.savefig("AUC_curve.png", dpi=300); 
     return None;
 
 def plotConfusionMatrix(cm, classes, title, rot=0, normalize=False,cmap=plt.cm.Blues, showColorBar=False):
@@ -155,5 +156,6 @@ def plotConfusionMatrix(cm, classes, title, rot=0, normalize=False,cmap=plt.cm.B
     plt.tight_layout();
     plt.xlabel('Predicted Class');
     plt.ylabel('True Class');
+    plt.savefig("confusion_matrix.png", dpi=300); 
     return None;
 
