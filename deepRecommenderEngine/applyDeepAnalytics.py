@@ -11,7 +11,7 @@ import pandas as pd
 import pickle
 import matplotlib.pyplot as plt
 import seaborn as sns
-sns.set(rc={"figure.figsize":(4,8),
+sns.set(rc={"figure.figsize":(4,10),
             "font.size":20,
             "axes.titlesize":20,
             "axes.labelsize":25,
@@ -50,7 +50,7 @@ def visualizeAndExport(probScore, filePath, savefig=True):
     plt.title(title);
 
     if savefig:
-        plt.savefig(fname=filePath, dpi=300);
+        plt.savefig(fname=filePath, dpi=300, bbox_inches="tight");
     else:
         plt.show(); 
 
