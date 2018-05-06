@@ -1,9 +1,9 @@
-# BlockHackDE-Vatican
+# Vatican: a BlockHackDE Project
 ![alt text](Assets/vatican.png)
 
 ## Overview
 
-Vatican is a Blockchain web application that stores immunization records with a deep learning recommendation engine for suggesting future vaccinations. 
+Vatican is a Blockchain-driven application that stores vaccine immunization and related health records with a deep learning-based engine for recommending future vaccinations based on patient demographics. 
 
 ## Features
 
